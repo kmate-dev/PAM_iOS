@@ -10,5 +10,5 @@ import Foundation
 struct ToDoItem: Identifiable {
     let id: Int
     let name: String
-    let completed: Bool
+    var completed: Bool
 }

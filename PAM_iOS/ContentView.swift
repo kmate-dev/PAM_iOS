@@ -9,62 +9,55 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        ToDoScreen()
     }
 }
 
 struct ToDoScreen: View {
+    @ObservedObject var viewModel = ToDoViewModel()
     @State private var newItemValue = ""
     
     var body: some View {
         NavigationView {
-            VStack {
-                TextField("New ToDo Item", text: $newItemValue)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                
-                Button(action: {
-                    //TODO viewmodel
-                }) {
-                    Text("Add note")
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                let toDoListMock: [ToDoItem] = [
-                    ToDoItem(id: 0, name: "Prepare Android Example", completed: false),
-                    ToDoItem(id: 1, name: "Prepare iOS example", completed: false)
-                ]
-                List {
-                    ForEach(toDoListMock) { item in
-                        HStack {
-                            Text(item.name)
-                                .foregroundColor(.black)
-                            Spacer()
-                            Button(action: {
-                                //TODO viewmodel
-                            }) {
-                                Image(systemName: item.completed ? "largecircle.fill.circle" : "circle")
-                                    .foregroundColor(item.completed ? .blue : .gray)
+            if (viewModel.loading) {
+                ProgressView("Loading...")
+                    .padding()
+            } else {
+                VStack {
+                    TextField("New ToDo Item", text: $newItemValue)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                    
+                    Button(action: {
+                        viewModel.addToDoItem(name: newItemValue)
+                    }) {
+                        Text("Add note")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                    }
+                    
+                    List {
+                        ForEach(viewModel.todosList) { item in
+                            HStack {
+                                Text(item.name)
+                                    .foregroundColor(.black)
+                                Spacer()
+                                Button(action: {
+                                    viewModel.completeItem(id: item.id)
+                                }) {
+                                    Image(systemName: item.completed ? "largecircle.fill.circle" : "circle")
+                                        .foregroundColor(item.completed ? .blue : .gray)
+                                }
+                                
                             }
-                            
-                        }
-                        .contentShape(Rectangle())
-                        .onTapGesture {
-                            //TODO viewmodel
+                            .contentShape(Rectangle())
                         }
                     }
                 }
+                .padding()
             }
-            .padding()
-            
         }
     }
     
