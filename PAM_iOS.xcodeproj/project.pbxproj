@@ -14,6 +14,7 @@
 		427709622CBB01C9004A49D1 /* PAM_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709612CBB01C9004A49D1 /* PAM_iOSTests.swift */; };
 		4277096C2CBB01C9004A49D1 /* PAM_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277096B2CBB01C9004A49D1 /* PAM_iOSUITests.swift */; };
 		4277096E2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */; };
+		4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277097C2CBBAA29004A49D1 /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		427709672CBB01C9004A49D1 /* PAM_iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PAM_iOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4277096B2CBB01C9004A49D1 /* PAM_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAM_iOSUITests.swift; sourceTree = "<group>"; };
 		4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAM_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4277097C2CBBAA29004A49D1 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		4277094F2CBB01C6004A49D1 /* PAM_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4277097A2CBBA9E0004A49D1 /* Domain */,
 				427709502CBB01C6004A49D1 /* PAM_iOSApp.swift */,
 				427709522CBB01C6004A49D1 /* ContentView.swift */,
 				427709542CBB01C8004A49D1 /* Assets.xcassets */,
@@ -125,6 +128,22 @@
 				4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */,
 			);
 			path = PAM_iOSUITests;
+			sourceTree = "<group>";
+		};
+		4277097A2CBBA9E0004A49D1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4277097E2CBBAA3E004A49D1 /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4277097E2CBBAA3E004A49D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4277097C2CBBAA29004A49D1 /* ToDoItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +278,7 @@
 			files = (
 				427709532CBB01C6004A49D1 /* ContentView.swift in Sources */,
 				427709512CBB01C6004A49D1 /* PAM_iOSApp.swift in Sources */,
+				4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
