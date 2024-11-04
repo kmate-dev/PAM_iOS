@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ToDoViewModel: ObservableObject {
+class ToDoListViewModel: ObservableObject {
     @Published var todosList: [ToDoItem] = []
     @Published var loading: Bool = false
     

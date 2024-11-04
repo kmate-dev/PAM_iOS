@@ -1,29 +1,25 @@
 //
-//  ContentView.swift
+//  ToDoListScreen.swift
 //  PAM_iOS
 //
-//  Created by kmate on 12/10/2024.
+//  Created by kmate on 04/11/2024.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        ToDoScreen()
-    }
-}
-
-struct ToDoScreen: View {
-    @ObservedObject var viewModel = ToDoViewModel()
+struct ToDoListScreen: View {
+    @ObservedObject var viewModel: ToDoListViewModel
     @State private var newItemValue = ""
     
+    @EnvironmentObject var router: Router
+    
     var body: some View {
-        NavigationView {
-            if (viewModel.loading) {
+        NavigationStack(path: $router.path) {
+            VStack {
+                if (viewModel.loading) {
                 ProgressView("Loading...")
                     .padding()
-            } else {
-                VStack {
+                } else {
                     TextField("New ToDo Item", text: $newItemValue)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                     
@@ -43,6 +39,10 @@ struct ToDoScreen: View {
                             HStack {
                                 Text(item.name)
                                     .foregroundColor(.black)
+                                    .onTapGesture {
+                                        router.push(to: .todoitem(viewModel: ToDoItemViewModel(), itemId: item.id))
+                                    }
+                                
                                 Spacer()
                                 Button(action: {
                                     viewModel.completeItem(id: item.id)
@@ -56,15 +56,16 @@ struct ToDoScreen: View {
                         }
                     }
                 }
-                .padding()
             }
+            .padding()
+            .navigationDestinationRoute()
         }
     }
-    
+        
 }
 
-struct ToDoScreen_Previews: PreviewProvider {
+struct ToDoListScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoScreen()
+        ToDoListScreen(viewModel: ToDoListViewModel())
     }
 }

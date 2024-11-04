@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		422A4BA42CD952F6001157F8 /* ToDoItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4BA32CD952F6001157F8 /* ToDoItemViewModel.swift */; };
+		422A4BA62CD95389001157F8 /* ToDoListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4BA52CD95389001157F8 /* ToDoListScreen.swift */; };
+		422A4BA92CD95B67001157F8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4BA82CD95B67001157F8 /* Router.swift */; };
+		422A4BAB2CD95C30001157F8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4BAA2CD95C30001157F8 /* RootView.swift */; };
+		422A4BAD2CD968D0001157F8 /* ToDoItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422A4BAC2CD968D0001157F8 /* ToDoItemScreen.swift */; };
 		427709512CBB01C6004A49D1 /* PAM_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709502CBB01C6004A49D1 /* PAM_iOSApp.swift */; };
-		427709532CBB01C6004A49D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709522CBB01C6004A49D1 /* ContentView.swift */; };
 		427709552CBB01C8004A49D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427709542CBB01C8004A49D1 /* Assets.xcassets */; };
 		427709582CBB01C8004A49D1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427709572CBB01C8004A49D1 /* Preview Assets.xcassets */; };
 		427709622CBB01C9004A49D1 /* PAM_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709612CBB01C9004A49D1 /* PAM_iOSTests.swift */; };
 		4277096C2CBB01C9004A49D1 /* PAM_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277096B2CBB01C9004A49D1 /* PAM_iOSUITests.swift */; };
 		4277096E2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */; };
 		4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277097C2CBBAA29004A49D1 /* ToDoItem.swift */; };
-		427709822CBBB360004A49D1 /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709812CBBB360004A49D1 /* ToDoViewModel.swift */; };
+		427709822CBBB360004A49D1 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709812CBBB360004A49D1 /* ToDoListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		422A4BA32CD952F6001157F8 /* ToDoItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemViewModel.swift; sourceTree = "<group>"; };
+		422A4BA52CD95389001157F8 /* ToDoListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListScreen.swift; sourceTree = "<group>"; };
+		422A4BA82CD95B67001157F8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		422A4BAA2CD95C30001157F8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		422A4BAC2CD968D0001157F8 /* ToDoItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemScreen.swift; sourceTree = "<group>"; };
 		4277094D2CBB01C6004A49D1 /* PAM_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PAM_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		427709502CBB01C6004A49D1 /* PAM_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAM_iOSApp.swift; sourceTree = "<group>"; };
-		427709522CBB01C6004A49D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		427709542CBB01C8004A49D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		427709572CBB01C8004A49D1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4277095D2CBB01C9004A49D1 /* PAM_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PAM_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,7 +55,7 @@
 		4277096B2CBB01C9004A49D1 /* PAM_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAM_iOSUITests.swift; sourceTree = "<group>"; };
 		4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAM_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4277097C2CBBAA29004A49D1 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
-		427709812CBBB360004A49D1 /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
+		427709812CBBB360004A49D1 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		422A4BA22CD94B7F001157F8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				422A4BA52CD95389001157F8 /* ToDoListScreen.swift */,
+				422A4BAC2CD968D0001157F8 /* ToDoItemScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		422A4BA72CD95B42001157F8 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				422A4BA82CD95B67001157F8 /* Router.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
 		427709442CBB01C6004A49D1 = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +126,6 @@
 				4277097F2CBBB31D004A49D1 /* Presentation */,
 				4277097A2CBBA9E0004A49D1 /* Domain */,
 				427709502CBB01C6004A49D1 /* PAM_iOSApp.swift */,
-				427709522CBB01C6004A49D1 /* ContentView.swift */,
 				427709542CBB01C8004A49D1 /* Assets.xcassets */,
 				427709562CBB01C8004A49D1 /* Preview Content */,
 			);
@@ -152,7 +176,10 @@
 		4277097F2CBBB31D004A49D1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				422A4BA72CD95B42001157F8 /* Routing */,
+				422A4BA22CD94B7F001157F8 /* Screens */,
 				427709802CBBB343004A49D1 /* ViewModels */,
+				422A4BAA2CD95C30001157F8 /* RootView.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -160,7 +187,8 @@
 		427709802CBBB343004A49D1 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				427709812CBBB360004A49D1 /* ToDoViewModel.swift */,
+				427709812CBBB360004A49D1 /* ToDoListViewModel.swift */,
+				422A4BA32CD952F6001157F8 /* ToDoItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -295,10 +323,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				427709822CBBB360004A49D1 /* ToDoViewModel.swift in Sources */,
-				427709532CBB01C6004A49D1 /* ContentView.swift in Sources */,
+				427709822CBBB360004A49D1 /* ToDoListViewModel.swift in Sources */,
 				427709512CBB01C6004A49D1 /* PAM_iOSApp.swift in Sources */,
+				422A4BA62CD95389001157F8 /* ToDoListScreen.swift in Sources */,
+				422A4BA42CD952F6001157F8 /* ToDoItemViewModel.swift in Sources */,
+				422A4BAD2CD968D0001157F8 /* ToDoItemScreen.swift in Sources */,
 				4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */,
+				422A4BAB2CD95C30001157F8 /* RootView.swift in Sources */,
+				422A4BA92CD95B67001157F8 /* Router.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
