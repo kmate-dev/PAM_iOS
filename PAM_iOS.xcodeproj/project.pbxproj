@@ -20,8 +20,8 @@
 		4277096E2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */; };
 		4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277097C2CBBAA29004A49D1 /* ToDoItem.swift */; };
 		427709822CBBB360004A49D1 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709812CBBB360004A49D1 /* ToDoListViewModel.swift */; };
-		42E96CC12CE12B8A005AFF53 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 42E96CC02CE12B8A005AFF53 /* Swinject */; };
-		42E96CC32CE12B8A005AFF53 /* Swinject-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 42E96CC22CE12B8A005AFF53 /* Swinject-Dynamic */; };
+		42E96CC62CE14095005AFF53 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CC52CE14095005AFF53 /* Injection.swift */; };
+		42E96CC92CE1456C005AFF53 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 42E96CC82CE1456C005AFF53 /* Swinject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +58,7 @@
 		4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAM_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4277097C2CBBAA29004A49D1 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		427709812CBBB360004A49D1 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
+		42E96CC52CE14095005AFF53 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42E96CC12CE12B8A005AFF53 /* Swinject in Frameworks */,
-				42E96CC32CE12B8A005AFF53 /* Swinject-Dynamic in Frameworks */,
+				42E96CC92CE1456C005AFF53 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +127,7 @@
 		4277094F2CBB01C6004A49D1 /* PAM_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				42E96CC42CE14073005AFF53 /* DI */,
 				4277097F2CBBB31D004A49D1 /* Presentation */,
 				4277097A2CBBA9E0004A49D1 /* Domain */,
 				427709502CBB01C6004A49D1 /* PAM_iOSApp.swift */,
@@ -197,6 +198,14 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		42E96CC42CE14073005AFF53 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				42E96CC52CE14095005AFF53 /* Injection.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,8 +223,7 @@
 			);
 			name = PAM_iOS;
 			packageProductDependencies = (
-				42E96CC02CE12B8A005AFF53 /* Swinject */,
-				42E96CC22CE12B8A005AFF53 /* Swinject-Dynamic */,
+				42E96CC82CE1456C005AFF53 /* Swinject */,
 			);
 			productName = PAM_iOS;
 			productReference = 4277094D2CBB01C6004A49D1 /* PAM_iOS.app */;
@@ -290,7 +298,7 @@
 			);
 			mainGroup = 427709442CBB01C6004A49D1;
 			packageReferences = (
-				42E96CBF2CE12B8A005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */,
+				42E96CC72CE1456C005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = 4277094E2CBB01C6004A49D1 /* Products */;
 			projectDirPath = "";
@@ -340,6 +348,7 @@
 				422A4BA42CD952F6001157F8 /* ToDoItemViewModel.swift in Sources */,
 				422A4BAD2CD968D0001157F8 /* ToDoItemScreen.swift in Sources */,
 				4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */,
+				42E96CC62CE14095005AFF53 /* Injection.swift in Sources */,
 				422A4BAB2CD95C30001157F8 /* RootView.swift in Sources */,
 				422A4BA92CD95B67001157F8 /* Router.swift in Sources */,
 			);
@@ -662,7 +671,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		42E96CBF2CE12B8A005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+		42E96CC72CE1456C005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
 			requirement = {
@@ -673,15 +682,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		42E96CC02CE12B8A005AFF53 /* Swinject */ = {
+		42E96CC82CE1456C005AFF53 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 42E96CBF2CE12B8A005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */;
+			package = 42E96CC72CE1456C005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
-		};
-		42E96CC22CE12B8A005AFF53 /* Swinject-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 42E96CBF2CE12B8A005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */;
-			productName = "Swinject-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

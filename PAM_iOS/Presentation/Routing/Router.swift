@@ -47,7 +47,7 @@ struct NavigationDestinationRoute: ViewModifier {
                 case .todolist(let viewModel):
                     ToDoListScreen(viewModel: viewModel)
                 case .todoitem(let viewModel, let itemId):
-                    ToDoItemScreen(viewModel: viewModel, itemId: itemId)
+                    ToDoItemScreen(viewModel: viewModel, itemId: itemId, injectedString: Injection.resolve())
             }
         }
     }
