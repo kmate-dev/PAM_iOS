@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ToDoListScreen: View {
-    @ObservedObject var viewModel: ToDoListViewModel
+    @ObservedObject var viewModel: ToDoListViewModel = Injection.resolve()
     @State private var newItemValue = ""
     
     @EnvironmentObject var router: Router
@@ -40,7 +40,7 @@ struct ToDoListScreen: View {
                                 Text(item.name)
                                     .foregroundColor(.black)
                                     .onTapGesture {
-                                        router.push(to: .todoitem(viewModel: ToDoItemViewModel(), itemId: item.id))
+                                        router.push(to: .todoitem(itemId: item.id))
                                     }
                                 
                                 Spacer()

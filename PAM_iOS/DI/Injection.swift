@@ -12,11 +12,16 @@ public class Injection {
     private let container = Container()
     
     private init() {
-        registerExample()
+        registerViewModels()
     }
     
-    private func registerExample() {
-        container.register(String.self) {_ in "Hello from dependency injection using Swinject"}
+    private func registerViewModels() {
+        container.register(ToDoListViewModel.self) { _ in
+            ToDoListViewModel()
+        }
+        container.register(ToDoItemViewModel.self) { _ in
+            ToDoItemViewModel()
+        }
     }
     
     public static func resolve<T>() -> T {

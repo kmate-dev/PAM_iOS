@@ -35,8 +35,8 @@ class Router: ObservableObject {
             lhs.hashValue == rhs.hashValue
         }
         
-        case todolist(viewModel: ToDoListViewModel)
-        case todoitem(viewModel: ToDoItemViewModel, itemId: Int)
+        case todolist
+        case todoitem(itemId: Int)
     }
 }
 
@@ -44,10 +44,10 @@ struct NavigationDestinationRoute: ViewModifier {
     func body(content: Content) -> some View {
         content.navigationDestination(for: Router.AppRoute.self) { route in
             switch route {
-                case .todolist(let viewModel):
-                    ToDoListScreen(viewModel: viewModel)
-                case .todoitem(let viewModel, let itemId):
-                    ToDoItemScreen(viewModel: viewModel, itemId: itemId, injectedString: Injection.resolve())
+                case .todolist:
+                    ToDoListScreen()
+                case .todoitem(let itemId):
+                    ToDoItemScreen(itemId: itemId)
             }
         }
     }
