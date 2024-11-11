@@ -8,17 +8,13 @@
 import Foundation
 
 class ToDoListViewModel: ObservableObject {
+    private let localDataStore: LocalDataStore = Injection.resolve()
     @Published var todosList: [ToDoItem] = []
     @Published var loading: Bool = false
     
-    private var itemId = 0
-    
     init() {
         //Fake fetch from DB
-        todosList.append(contentsOf: [
-            ToDoItem(id: getNextId(), name: "Prepare Android Example", completed: false),
-            ToDoItem(id: getNextId(), name: "Prepare iOS example", completed: false)
-        ])
+        todosList = localDataStore.getToDoItems()
     }
     
     func addToDoItem(name: String) {
@@ -27,6 +23,7 @@ class ToDoListViewModel: ObservableObject {
         
         DispatchQueue.main.asyncAfter( deadline: .now() + 0.5) {
             self.todosList.append(newItem)
+            self.localDataStore.updateToDoItems(items: self.todosList)
             self.loading = false
         }
     }
@@ -35,11 +32,14 @@ class ToDoListViewModel: ObservableObject {
         if let index = todosList.firstIndex(where: { $0.id == id }) {
             todosList[index].completed.toggle()
         }
+        localDataStore.updateToDoItems(items: todosList)
     }
     
     private func getNextId() -> Int {
-        let nextIndex = itemId
-        itemId += 1
-        return nextIndex
+        if let itemWithHighestId = todosList.max(by: { $0.id < $1.id }) {
+            return itemWithHighestId.id + 1
+        } else {
+            return 0
+        }
     }
 }

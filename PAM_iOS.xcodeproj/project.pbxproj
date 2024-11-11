@@ -22,6 +22,7 @@
 		427709822CBBB360004A49D1 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709812CBBB360004A49D1 /* ToDoListViewModel.swift */; };
 		42E96CC62CE14095005AFF53 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CC52CE14095005AFF53 /* Injection.swift */; };
 		42E96CC92CE1456C005AFF53 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 42E96CC82CE1456C005AFF53 /* Swinject */; };
+		42E96CCC2CE14A3B005AFF53 /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		4277097C2CBBAA29004A49D1 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		427709812CBBB360004A49D1 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
 		42E96CC52CE14095005AFF53 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		4277094F2CBB01C6004A49D1 /* PAM_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				42E96CCA2CE14A08005AFF53 /* Data */,
 				42E96CC42CE14073005AFF53 /* DI */,
 				4277097F2CBBB31D004A49D1 /* Presentation */,
 				4277097A2CBBA9E0004A49D1 /* Domain */,
@@ -202,8 +205,16 @@
 			isa = PBXGroup;
 			children = (
 				42E96CC52CE14095005AFF53 /* Injection.swift */,
+				42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		42E96CCA2CE14A08005AFF53 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +356,7 @@
 				427709822CBBB360004A49D1 /* ToDoListViewModel.swift in Sources */,
 				427709512CBB01C6004A49D1 /* PAM_iOSApp.swift in Sources */,
 				422A4BA62CD95389001157F8 /* ToDoListScreen.swift in Sources */,
+				42E96CCC2CE14A3B005AFF53 /* LocalDataStore.swift in Sources */,
 				422A4BA42CD952F6001157F8 /* ToDoItemViewModel.swift in Sources */,
 				422A4BAD2CD968D0001157F8 /* ToDoItemScreen.swift in Sources */,
 				4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */,

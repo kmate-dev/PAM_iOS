@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ToDoItem: Identifiable {
+struct ToDoItem: Identifiable, Codable {
     let id: Int
     let name: String
     var completed: Bool

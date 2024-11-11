@@ -8,5 +8,11 @@
 import Foundation
 
 class ToDoItemViewModel: ObservableObject {
-    //Empty for now
+    private let localDataStore: LocalDataStore = Injection.resolve()
+    @Published var todoItem: ToDoItem? = nil
+    
+    init(todoItemId: Int) {
+        let item = localDataStore.getToDoItem(itemId: todoItemId)
+        self.todoItem = item
+    }
 }

@@ -8,16 +8,15 @@
 import SwiftUI
 
 struct ToDoItemScreen: View {
-    @ObservedObject private var viewModel: ToDoItemViewModel = Injection.resolve()
-    private var itemId: Int
+    @ObservedObject private var viewModel: ToDoItemViewModel
     
     init(itemId: Int) {
-        self.itemId = itemId
+        self.viewModel = Injection.resolve(argument: itemId)
     }
     
     var body: some View {
         VStack {
-            Text("This screen should show details of item: \(itemId)")
+            Text("ToDoItem: \(String(describing: viewModel.todoItem))")
         }
     }
 }
