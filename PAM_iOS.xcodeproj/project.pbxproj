@@ -20,6 +20,7 @@
 		4277096E2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */; };
 		4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277097C2CBBAA29004A49D1 /* ToDoItem.swift */; };
 		427709822CBBB360004A49D1 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709812CBBB360004A49D1 /* ToDoListViewModel.swift */; };
+		42BE993D2CFE36D300C8B53A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 42BE993C2CFE36D300C8B53A /* Alamofire */; };
 		42E96CC62CE14095005AFF53 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CC52CE14095005AFF53 /* Injection.swift */; };
 		42E96CC92CE1456C005AFF53 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 42E96CC82CE1456C005AFF53 /* Swinject */; };
 		42E96CCC2CE14A3B005AFF53 /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */; };
@@ -69,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42E96CC92CE1456C005AFF53 /* Swinject in Frameworks */,
+				42BE993D2CFE36D300C8B53A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				42E96CC52CE14095005AFF53 /* Injection.swift */,
-				42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -213,6 +214,7 @@
 		42E96CCA2CE14A08005AFF53 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -235,6 +237,7 @@
 			name = PAM_iOS;
 			packageProductDependencies = (
 				42E96CC82CE1456C005AFF53 /* Swinject */,
+				42BE993C2CFE36D300C8B53A /* Alamofire */,
 			);
 			productName = PAM_iOS;
 			productReference = 4277094D2CBB01C6004A49D1 /* PAM_iOS.app */;
@@ -310,6 +313,7 @@
 			mainGroup = 427709442CBB01C6004A49D1;
 			packageReferences = (
 				42E96CC72CE1456C005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */,
+				42BE993B2CFE36D300C8B53A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 4277094E2CBB01C6004A49D1 /* Products */;
 			projectDirPath = "";
@@ -683,6 +687,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		42BE993B2CFE36D300C8B53A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		42E96CC72CE1456C005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject";
@@ -694,6 +706,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		42BE993C2CFE36D300C8B53A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42BE993B2CFE36D300C8B53A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		42E96CC82CE1456C005AFF53 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 42E96CC72CE1456C005AFF53 /* XCRemoteSwiftPackageReference "Swinject" */;
