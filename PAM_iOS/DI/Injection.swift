@@ -14,6 +14,7 @@ public class Injection {
     private init() {
         registerViewModels()
         registerRepositories()
+        registerApiService()
     }
     
     private func registerViewModels() {
@@ -28,6 +29,12 @@ public class Injection {
     private func registerRepositories() {
         container.register(LocalDataStore.self) { _ in
             LocalDataStoreImpl(userDefaults: UserDefaults.standard)
+        }
+    }
+    
+    private func registerApiService() {
+        container.register(ApiService.self) { _ in
+            ApiServiceImpl()
         }
     }
     
