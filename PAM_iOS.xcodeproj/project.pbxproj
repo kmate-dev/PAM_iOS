@@ -21,6 +21,9 @@
 		4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4277097C2CBBAA29004A49D1 /* ToDoItem.swift */; };
 		427709822CBBB360004A49D1 /* ToDoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427709812CBBB360004A49D1 /* ToDoListViewModel.swift */; };
 		42BE993D2CFE36D300C8B53A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 42BE993C2CFE36D300C8B53A /* Alamofire */; };
+		42BE993F2CFE37A500C8B53A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE993E2CFE37A500C8B53A /* ApiService.swift */; };
+		42BE99422CFE38BA00C8B53A /* RemoteModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE99412CFE38BA00C8B53A /* RemoteModels.swift */; };
+		42BE99442CFE523000C8B53A /* ApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE99432CFE523000C8B53A /* ApiServiceImpl.swift */; };
 		42E96CC62CE14095005AFF53 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CC52CE14095005AFF53 /* Injection.swift */; };
 		42E96CC92CE1456C005AFF53 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 42E96CC82CE1456C005AFF53 /* Swinject */; };
 		42E96CCC2CE14A3B005AFF53 /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */; };
@@ -60,6 +63,9 @@
 		4277096D2CBB01C9004A49D1 /* PAM_iOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PAM_iOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4277097C2CBBAA29004A49D1 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		427709812CBBB360004A49D1 /* ToDoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewModel.swift; sourceTree = "<group>"; };
+		42BE993E2CFE37A500C8B53A /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		42BE99412CFE38BA00C8B53A /* RemoteModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteModels.swift; sourceTree = "<group>"; };
+		42BE99432CFE523000C8B53A /* ApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImpl.swift; sourceTree = "<group>"; };
 		42E96CC52CE14095005AFF53 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -203,6 +209,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		42BE99402CFE388D00C8B53A /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				42BE993E2CFE37A500C8B53A /* ApiService.swift */,
+				42BE99412CFE38BA00C8B53A /* RemoteModels.swift */,
+				42BE99432CFE523000C8B53A /* ApiServiceImpl.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
 		42E96CC42CE14073005AFF53 /* DI */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +230,7 @@
 		42E96CCA2CE14A08005AFF53 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				42BE99402CFE388D00C8B53A /* Remote */,
 				42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */,
 			);
 			path = Data;
@@ -358,11 +375,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				427709822CBBB360004A49D1 /* ToDoListViewModel.swift in Sources */,
+				42BE99422CFE38BA00C8B53A /* RemoteModels.swift in Sources */,
 				427709512CBB01C6004A49D1 /* PAM_iOSApp.swift in Sources */,
+				42BE99442CFE523000C8B53A /* ApiServiceImpl.swift in Sources */,
 				422A4BA62CD95389001157F8 /* ToDoListScreen.swift in Sources */,
 				42E96CCC2CE14A3B005AFF53 /* LocalDataStore.swift in Sources */,
 				422A4BA42CD952F6001157F8 /* ToDoItemViewModel.swift in Sources */,
 				422A4BAD2CD968D0001157F8 /* ToDoItemScreen.swift in Sources */,
+				42BE993F2CFE37A500C8B53A /* ApiService.swift in Sources */,
 				4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */,
 				42E96CC62CE14095005AFF53 /* Injection.swift in Sources */,
 				422A4BAB2CD95C30001157F8 /* RootView.swift in Sources */,
