@@ -60,6 +60,9 @@ struct ToDoListScreen: View {
             .padding()
             .navigationDestinationRoute()
         }
+        .task {
+            await viewModel.loadRemoteItems()
+        }
     }
         
 }

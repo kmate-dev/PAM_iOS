@@ -8,6 +8,7 @@
 import Foundation
 
 class ToDoListViewModel: ObservableObject {
+    private let apiService: ApiService = Injection.resolve()
     private let localDataStore: LocalDataStore = Injection.resolve()
     @Published var todosList: [ToDoItem] = []
     @Published var loading: Bool = false
@@ -15,6 +16,18 @@ class ToDoListViewModel: ObservableObject {
     init() {
         //Fake fetch from DB
         todosList = localDataStore.getToDoItems()
+    }
+    
+    func loadRemoteItems() async {
+        do {
+            let items = try await apiService.getToDoItems()
+            
+            DispatchQueue.main.async {
+                self.todosList += items
+            }
+        } catch {
+            print("Error: \(error.localizedDescription)")
+        }
     }
     
     func addToDoItem(name: String) {
@@ -39,7 +52,7 @@ class ToDoListViewModel: ObservableObject {
         if let itemWithHighestId = todosList.max(by: { $0.id < $1.id }) {
             return itemWithHighestId.id + 1
         } else {
-            return 0
+            return 100 //Starting from > 30 to avoid local and network items mixing (dirty workaround)
         }
     }
 }
