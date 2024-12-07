@@ -26,6 +26,8 @@
 		42BE99442CFE523000C8B53A /* ApiServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE99432CFE523000C8B53A /* ApiServiceImpl.swift */; };
 		42BE99472D0498BE00C8B53A /* BookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE99462D0498BE00C8B53A /* BookStore.swift */; };
 		42BE99492D04B31300C8B53A /* BookStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE99482D04B31300C8B53A /* BookStoreTest.swift */; };
+		42BE994B2D04C32500C8B53A /* LocalBookStoreImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE994A2D04C32500C8B53A /* LocalBookStoreImpl.swift */; };
+		42BE994D2D04C48200C8B53A /* BrokenBookStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE994C2D04C48200C8B53A /* BrokenBookStore.swift */; };
 		42E96CC62CE14095005AFF53 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CC52CE14095005AFF53 /* Injection.swift */; };
 		42E96CC92CE1456C005AFF53 /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 42E96CC82CE1456C005AFF53 /* Swinject */; };
 		42E96CCC2CE14A3B005AFF53 /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */; };
@@ -70,6 +72,8 @@
 		42BE99432CFE523000C8B53A /* ApiServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceImpl.swift; sourceTree = "<group>"; };
 		42BE99462D0498BE00C8B53A /* BookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStore.swift; sourceTree = "<group>"; };
 		42BE99482D04B31300C8B53A /* BookStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookStoreTest.swift; sourceTree = "<group>"; };
+		42BE994A2D04C32500C8B53A /* LocalBookStoreImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalBookStoreImpl.swift; sourceTree = "<group>"; };
+		42BE994C2D04C48200C8B53A /* BrokenBookStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrokenBookStore.swift; sourceTree = "<group>"; };
 		42E96CC52CE14095005AFF53 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		42E96CCB2CE14A3B005AFF53 /* LocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -229,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				42BE99462D0498BE00C8B53A /* BookStore.swift */,
+				42BE994A2D04C32500C8B53A /* LocalBookStoreImpl.swift */,
+				42BE994C2D04C48200C8B53A /* BrokenBookStore.swift */,
 			);
 			path = Fortesting;
 			sourceTree = "<group>";
@@ -397,7 +403,9 @@
 				42BE99472D0498BE00C8B53A /* BookStore.swift in Sources */,
 				422A4BA42CD952F6001157F8 /* ToDoItemViewModel.swift in Sources */,
 				422A4BAD2CD968D0001157F8 /* ToDoItemScreen.swift in Sources */,
+				42BE994D2D04C48200C8B53A /* BrokenBookStore.swift in Sources */,
 				42BE993F2CFE37A500C8B53A /* ApiService.swift in Sources */,
+				42BE994B2D04C32500C8B53A /* LocalBookStoreImpl.swift in Sources */,
 				4277097D2CBBAA29004A49D1 /* ToDoItem.swift in Sources */,
 				42E96CC62CE14095005AFF53 /* Injection.swift in Sources */,
 				422A4BAB2CD95C30001157F8 /* RootView.swift in Sources */,
