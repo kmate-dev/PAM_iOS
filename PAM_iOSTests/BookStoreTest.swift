@@ -48,4 +48,20 @@ final class BookStoreTest: XCTestCase {
         //Verification
         XCTAssertEqual(expectedBooks, store.getAllBooks())
     }
+    
+    func testRemoveBookReturnsTrueOnlyIfBookHasBeenRemoved() throws {
+        let testCases = [
+            (input: 2, expected: true),
+            (input: 100, expected: false),
+            (input: 0, expected: true),
+            (input: -5, expected: false),
+        ]
+        
+        for (input, expected) in testCases {
+            XCTContext.runActivity(named: "Testing \(expected) is returned when removing book with id \(input)") { activity in
+                let returnValue = store.removeBook(byId: input)
+                XCTAssertEqual(returnValue, expected)
+            }
+        }
+    }
 }
